@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ModMetaData>
+  <name>Nomadic Carts</name>
+  <packageId>Koro.MapVehicles.nomadicCarts</packageId>
+  <author>Koro</author>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Move your house with you! Based on the Map-Vehicles mod, this mod adds two more large carts. Build your home on them, and move from place to place. Perfect for a nomadic playthrough.</description>
+  <modDependencies>
+    <li>
+      <packageId>OELS.MapVehicles</packageId>
+      <displayName>Map Vehicles</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=3426502635</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>OELS.MapVehicles</li>
+  </loadAfter>
+</ModMetaData>
