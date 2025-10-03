@@ -13,6 +13,12 @@
 			<Mass>5</Mass>
 		</statBases>
 		<size>(1,1)</size>
+		<costList>
+			<WoodLog>100</WoodLog>
+		</costList>
+		<researchPrerequisites Inherit="False">
+			<li>MV_Cart</li>
+		</researchPrerequisites>
 		<comps>
 			<li Class = "VehicleMapFramework.CompProperties_BuildableUpgrades">
 				<compClass>VehicleMapFramework.CompVehicleSeat</compClass>
