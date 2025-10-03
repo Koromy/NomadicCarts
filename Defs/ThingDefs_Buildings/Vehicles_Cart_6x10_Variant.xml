@@ -86,6 +86,7 @@
             <drawOffsetSouth>(1.5,0,-4.5)</drawOffsetSouth>
             <drawOffsetEast>(6,0,2.25)</drawOffsetEast>
             <drawOffsetWest>(-6,0,-0.75)</drawOffsetWest>
+            <layerSouth>-1</layerSouth>
           </pawnRenderer>
         </li>
         <li>
@@ -104,6 +105,7 @@
             <drawOffsetSouth>(-1.5,0,-4.5)</drawOffsetSouth>
             <drawOffsetEast>(6,0,-0.75)</drawOffsetEast>
             <drawOffsetWest>(-6,0,2.25)</drawOffsetWest>
+            <layerSouth>-1</layerSouth>
           </pawnRenderer>
         </li>
       </roles>
