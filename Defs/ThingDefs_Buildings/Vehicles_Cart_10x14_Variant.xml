@@ -83,7 +83,7 @@
           </hitbox>
           <pawnRenderer>
             <drawOffsetNorth>(-1.5,0,7.5)</drawOffsetNorth>
-            <drawOffsetSouth>(1.5,0,-7.0)</drawOffsetSouth>
+            <drawOffsetSouth>(1.5,0,-6.8)</drawOffsetSouth>
             <drawOffsetEast>(7.5,0,2)</drawOffsetEast>
             <drawOffsetWest>(-7.5,0,2)</drawOffsetWest>
             <layerSouth>-1</layerSouth>
@@ -102,7 +102,7 @@
           </hitbox>
           <pawnRenderer>
             <drawOffsetNorth>(1.5,0,7.5)</drawOffsetNorth>
-            <drawOffsetSouth>(-1.5,0,-7.0)</drawOffsetSouth>
+            <drawOffsetSouth>(-1.5,0,-6.8)</drawOffsetSouth>
             <drawOffsetEast>(7.5,0,-1.0)</drawOffsetEast>
             <drawOffsetWest>(-7.5,0,-1)</drawOffsetWest>
             <layerSouth>-1</layerSouth>
