@@ -14,7 +14,7 @@
 		</statBases>
 		<size>(1,1)</size>
 		<costList>
-			<WoodLog>100</WoodLog>
+			<Cloth>100</Cloth>
 		</costList>
 		<researchPrerequisites Inherit="False">
 			<li>MV_Cart</li>

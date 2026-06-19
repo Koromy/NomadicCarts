@@ -21,10 +21,11 @@
     </researchPrerequisites>
     <costList>
       <WoodLog>1200</WoodLog>
-      <ComponentIndustrial>16</ComponentIndustrial>
+      <Steel>350</Steel>
     </costList>
     <soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
     <thingToSpawn>MV_Cart_10x14_Variant</thingToSpawn>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
   </Vehicles.VehicleBuildDef>
 
   <Vehicles.VehicleDef ParentName="BaseVehiclePawnWithMap">
@@ -51,8 +52,8 @@
     </statBases>
     <vehicleStats>
       <Mass>250</Mass>
-      <MoveSpeed>2</MoveSpeed>
-      <CargoCapacity>0</CargoCapacity>
+      <MoveSpeed>1.8</MoveSpeed>
+      <CargoCapacity>500</CargoCapacity>
       <RepairRate>1.5</RepairRate>
       <MaximumPayload>0</MaximumPayload>
     </vehicleStats>

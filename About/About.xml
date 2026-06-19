@@ -16,5 +16,6 @@
   </modDependencies>
   <loadAfter>
     <li>OELS.MapVehicles</li>
+    <li>dankpyon.medieval.overhaul</li>
   </loadAfter>
 </ModMetaData>
