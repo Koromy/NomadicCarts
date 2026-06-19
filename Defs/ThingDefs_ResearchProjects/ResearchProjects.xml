@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+    <ResearchProjectDef>
+        <defName>N_Carts</defName>
+        <label>Nomadic Carts</label>
+        <description>Learn how to construct carts. Carts are rustic vehicle maps, that are powered by animals and allow you to build on top of their deck.</description>
+        <baseCost>600</baseCost>
+        <techLevel>Medieval</techLevel>
+        <researchViewX>0.00</researchViewX>
+        <researchViewY>0.00</researchViewY>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->nomadic carts</li>
+                <li>subject_story->plans how to live with less furniture</li>
+                <li>subject_story->considers the loss of their privacy in a cramped, wheeled home</li>
+                <li>subject_story->drains the sewage tank in a public place</li>
+				<li>subject_story->glues every piece of decor onto their shelves</li>
+                <li>subject_gerund->assembling wheels, planks and nails into a cart</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+</Defs>

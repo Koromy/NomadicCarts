@@ -2,7 +2,7 @@
 <Defs>
 
   <Vehicles.VehicleBuildDef ParentName="VehicleWithMapBaseBuildable">
-    <defName>MV_Cart_10x14_Variant_Blueprint</defName>
+    <defName>N_Carts_10x14_Variant_Blueprint</defName>
     <label>Large Cart</label>
     <designationCategory>VF_Vehicles</designationCategory>
     <graphicData>
@@ -17,19 +17,19 @@
     </statBases>
     <size>(12,18)</size>
     <researchPrerequisites>
-      <li>MV_Cart</li>
+      <li>N_Carts</li>
     </researchPrerequisites>
     <costList>
       <WoodLog>1200</WoodLog>
       <Steel>350</Steel>
     </costList>
     <soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
-    <thingToSpawn>MV_Cart_10x14_Variant</thingToSpawn>
+    <thingToSpawn>N_Carts_10x14_Variant</thingToSpawn>
     <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
   </Vehicles.VehicleBuildDef>
 
   <Vehicles.VehicleDef ParentName="BaseVehiclePawnWithMap">
-    <defName>MV_Cart_10x14_Variant</defName>
+    <defName>N_Carts_10x14_Variant</defName>
     <label>Large Bison Drawn Cart</label>
     <graphicData>
       <texPath>Things/Vehicles/Cart_10x14_Variant/Cart_10x14_Variant</texPath>
@@ -38,7 +38,7 @@
       <drawSize>(12, 18)</drawSize>
     </graphicData>
     <fillPercent>0.4</fillPercent>
-    <buildDef>MV_Cart_10x14_Variant_Blueprint</buildDef>
+    <buildDef>N_Carts_10x14_Variant_Blueprint</buildDef>
     <size>(12,18)</size>
     <vehicleCategory>Transport</vehicleCategory>
     <techLevel>Medieval</techLevel>

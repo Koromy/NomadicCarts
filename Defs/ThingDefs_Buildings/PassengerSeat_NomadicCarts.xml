@@ -17,7 +17,7 @@
 			<Cloth>100</Cloth>
 		</costList>
 		<researchPrerequisites Inherit="False">
-			<li>MV_Cart</li>
+			<li>N_Carts</li>
 		</researchPrerequisites>
 		<comps>
 			<li Class = "VehicleMapFramework.CompProperties_BuildableUpgrades">
