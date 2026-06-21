@@ -30,7 +30,7 @@
 
   <Vehicles.VehicleDef ParentName="BaseVehiclePawnWithMap">
     <defName>N_Carts_Medium</defName>
-    <label>Two-Horse Cart</label>
+    <label>Horse Cart</label>
     <graphicData>
       <texPath>Things/Vehicles/Cart_6x10_Variant/Cart_6x10_Variant</texPath>
       <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
