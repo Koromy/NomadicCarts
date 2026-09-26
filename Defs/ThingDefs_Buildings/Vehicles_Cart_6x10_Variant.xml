@@ -268,7 +268,7 @@
         </hitbox>
       </li>
     </components>
-        <comps>
+    <comps>
       <li Class="Vehicles.CompProperties_FueledTravel">
         <fuelType>Hay</fuelType>
         <fuelConsumptionRate>15</fuelConsumptionRate>
