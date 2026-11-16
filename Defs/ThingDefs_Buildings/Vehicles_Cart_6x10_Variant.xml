@@ -3,11 +3,11 @@
 <!--Target: RimWorld 1.6; Vehicle Framework 1.6.2144; Vehicle Map Framework 1.6.562. Four independent artwork views; diagonal rotation disabled.-->
 <Defs>
   <Vehicles.VehicleDef ParentName="BaseVehiclePawnWithMap">
-    <defName>HorseCart_7x11_NCarts</defName>
-    <label>Horse Drawn Cart</label>
+    <defName>N_Carts_Medium</defName>
+    <label>Medium Cart</label>
     <description>A wooden cart, pulled by two horses and controlled by their riders.</description>
     <graphicData>
-      <texPath>Things/Vehicles/HorseCart_7x11_NCarts/HorseCart_7x11_NCarts</texPath>
+      <texPath>Things/Vehicles/Cart_6x10_Variant/Cart_6x10_Variant</texPath>
       <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
       <shaderType>Cutout</shaderType>
       <drawSize>(7.554688,14)</drawSize>
@@ -17,7 +17,7 @@
       <drawOffsetSouth>(0.00390625,0,-0.0390625)</drawOffsetSouth>
       <drawOffsetWest>(-0.1875,0,0.01171875)</drawOffsetWest>
     </graphicData>
-    <buildDef>HorseCart_7x11_Blueprint</buildDef>
+    <buildDef>N_Carts_Medium_Blueprint</buildDef>
     <size>(7,13)</size>
     <vehicleCategory>Transport</vehicleCategory>
     <techLevel>Medieval</techLevel>
@@ -375,12 +375,12 @@
     </modExtensions>
   </Vehicles.VehicleDef>
   <Vehicles.VehicleBuildDef ParentName="VehicleWithMapBaseBuildable">
-    <defName>HorseCart_7x11_Blueprint</defName>
-    <label>Horse Drawn Cart</label>
+    <defName>N_Carts_Medium_Blueprint</defName>
+    <label>Medium Cart</label>
     <description>A wooden cart, pulled by two horses and controlled by their riders.</description>
     <designationCategory>VF_Vehicles</designationCategory>
     <graphicData>
-      <texPath>Things/Vehicles/HorseCart_7x11_NCarts/HorseCart_7x11_NCarts</texPath>
+      <texPath>Things/Vehicles/Cart_6x10_Variant/Cart_6x10_Variant</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>Cutout</shaderType>
       <drawSize>(7.554688,14)</drawSize>
@@ -396,7 +396,7 @@
       <Flammability>1</Flammability>
     </statBases>
     <size>(7,13)</size>
-    <thingToSpawn>HorseCart_7x11_NCarts</thingToSpawn>
+    <thingToSpawn>N_Carts_Medium</thingToSpawn>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
     <researchPrerequisites>
       <li>N_Carts</li>

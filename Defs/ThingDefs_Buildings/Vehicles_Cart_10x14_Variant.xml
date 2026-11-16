@@ -3,11 +3,11 @@
 <!--Target: RimWorld 1.6; Vehicle Framework 1.6.2144; Vehicle Map Framework 1.6.562. Four independent artwork views; diagonal rotation disabled.-->
 <Defs>
   <Vehicles.VehicleDef ParentName="BaseVehiclePawnWithMap">
-    <defName>BisonCart_8x12_NCarts</defName>
-    <label>Bison Wagon</label>
+    <defName>N_Carts_10x14_Variant</defName>
+    <label>Large Cart</label>
     <description>A large wooden cart, drawn by two bisons.</description>
     <graphicData>
-      <texPath>Things/Vehicles/BisonCart_8x12_NCarts/BisonCart_8x12_NCarts</texPath>
+      <texPath>Things/Vehicles/Cart_10x14_Variant/Cart_10x14_Variant</texPath>
       <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
       <shaderType>Cutout</shaderType>
       <drawSize>(9.554688,17.29688)</drawSize>
@@ -17,7 +17,7 @@
       <drawOffsetSouth>(0.00390625,0,-0.5)</drawOffsetSouth>
       <drawOffsetWest>(-0.3984375,0,0.01171875)</drawOffsetWest>
     </graphicData>
-    <buildDef>BisonCart_8x12_NCarts_Blueprint</buildDef>
+    <buildDef>N_Carts_10x14_Variant_Blueprint</buildDef>
     <size>(9,16)</size>
     <vehicleCategory>Transport</vehicleCategory>
     <techLevel>Medieval</techLevel>
@@ -330,12 +330,12 @@
     </modExtensions>
   </Vehicles.VehicleDef>
   <Vehicles.VehicleBuildDef ParentName="VehicleWithMapBaseBuildable">
-    <defName>BisonCart_8x12_NCarts_Blueprint</defName>
-    <label>Bison Wagon</label>
+    <defName>N_Carts_10x14_Variant_Blueprint</defName>
+    <label>Large Cart</label>
     <description>A large wooden cart, drawn by two bisons.</description>
     <designationCategory>VF_Vehicles</designationCategory>
     <graphicData>
-      <texPath>Things/Vehicles/BisonCart_8x12_NCarts/BisonCart_8x12_NCarts</texPath>
+      <texPath>Things/Vehicles/Cart_10x14_Variant/Cart_10x14_Variant</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>Cutout</shaderType>
       <drawSize>(9.554688,17.29688)</drawSize>
@@ -351,7 +351,7 @@
       <Flammability>1</Flammability>
     </statBases>
     <size>(9,16)</size>
-    <thingToSpawn>BisonCart_8x12_NCarts</thingToSpawn>
+    <thingToSpawn>N_Carts_10x14_Variant</thingToSpawn>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <researchPrerequisites>
       <li>N_Carts</li>
