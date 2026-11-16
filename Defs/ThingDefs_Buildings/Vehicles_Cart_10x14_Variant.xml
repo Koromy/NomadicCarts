@@ -1,523 +1,391 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!--Target: RimWorld 1.6; Vehicle Framework 1.6.2144; Vehicle Map Framework 1.6.562. Four independent artwork views; diagonal rotation disabled.-->
 <Defs>
+
+  <Vehicles.VehicleBuildDef ParentName="VehicleWithMapBaseBuildable">
+    <defName>N_Carts_10x14_Variant_Blueprint</defName>
+    <label>Large Cart</label>
+    <designationCategory>VF_Vehicles</designationCategory>
+	<canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+    <graphicData>
+      <texPath>Things/Vehicles/Cart_10x14_Variant/Cart_10x14_Variant</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(12, 18)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>800</MaxHitPoints>
+      <WorkToBuild>3200</WorkToBuild>
+      <Flammability>0.05</Flammability>
+    </statBases>
+    <size>(12,18)</size>
+    <researchPrerequisites>
+      <li>N_Carts</li>
+    </researchPrerequisites>
+    <costList>
+      <WoodLog>1200</WoodLog>
+      <Steel>350</Steel>
+    </costList>
+    <soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+    <thingToSpawn>N_Carts_10x14_Variant</thingToSpawn>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+  </Vehicles.VehicleBuildDef>
+
   <Vehicles.VehicleDef ParentName="BaseVehiclePawnWithMap">
     <defName>N_Carts_10x14_Variant</defName>
-    <label>Large Cart</label>
-    <description>A large wooden cart, drawn by two bisons.</description>
+    <label>Bison Cart</label>
     <graphicData>
       <texPath>Things/Vehicles/Cart_10x14_Variant/Cart_10x14_Variant</texPath>
       <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-      <shaderType>Cutout</shaderType>
-      <drawSize>(9.554688,17.29688)</drawSize>
-      <allowFlip>false</allowFlip>
-      <drawOffsetNorth>(0.00390625,0,0.6484375)</drawOffsetNorth>
-      <drawOffsetEast>(0.453125,0,0.01171875)</drawOffsetEast>
-      <drawOffsetSouth>(0.00390625,0,-0.5)</drawOffsetSouth>
-      <drawOffsetWest>(-0.3984375,0,0.01171875)</drawOffsetWest>
+      <shaderType>CutoutComplexPattern</shaderType>
+      <drawSize>(12, 18)</drawSize>
     </graphicData>
+    <fillPercent>0.4</fillPercent>
     <buildDef>N_Carts_10x14_Variant_Blueprint</buildDef>
-    <size>(9,16)</size>
+    <size>(12,18)</size>
     <vehicleCategory>Transport</vehicleCategory>
     <techLevel>Medieval</techLevel>
     <vehicleType>Land</vehicleType>
-    <canCaravan>true</canCaravan>
     <statBases>
       <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
       <ArmorRating_Heat>0.4</ArmorRating_Heat>
-      <Flammability>1</Flammability>
-      <MarketValue>500</MarketValue>
+      <Flammability>1.0</Flammability>
+      <MarketValue>900</MarketValue>
     </statBases>
-    <comps>
-      <li Class="Vehicles.CompProperties_FueledTravel">
-        <fuelType>Hay</fuelType>
-        <electricPowered>false</electricPowered>
-        <fuelCapacity>400</fuelCapacity>
-        <fuelConsumptionRate>30</fuelConsumptionRate>
-        <fuelConsumptionWorldMultiplier>1</fuelConsumptionWorldMultiplier>
-        <fuelConsumptionCondition>Drafted, Moving</fuelConsumptionCondition>
-        <autoRefuelPercent>1</autoRefuelPercent>
-      </li>
-    </comps>
     <vehicleStats>
-      <Mass>400</Mass>
-      <MoveSpeed>2</MoveSpeed>
-      <CargoCapacity>800</CargoCapacity>
-      <MaximumPayload>800</MaximumPayload>
+      <Mass>250</Mass>
+      <MoveSpeed>1.8</MoveSpeed>
+      <CargoCapacity>500</CargoCapacity>
       <RepairRate>1.5</RepairRate>
+      <MaximumPayload>0</MaximumPayload>
     </vehicleStats>
+    <race>
+      <baseBodySize>4</baseBodySize>
+      <fleshType>WoodenVehicle</fleshType>
+    </race>
     <properties>
-      <diagonalRotation>false</diagonalRotation>
-      <worldSpeedMultiplier>1.4</worldSpeedMultiplier>
-      <offRoadMultiplier>1</offRoadMultiplier>
-      <customTerrainCosts>
-        <li>
-          <key>WaterDeep</key>
-          <value>10000</value>
-        </li>
-        <li>
-          <key>WaterOceanDeep</key>
-          <value>10000</value>
-        </li>
-      </customTerrainCosts>
+      <customTerrainCosts DisallowTerrainWithTag="Water"/>
       <customHillinessCosts>
         <SmallHills>0.25</SmallHills>
         <LargeHills>0.75</LargeHills>
         <Mountainous>1.5</Mountainous>
       </customHillinessCosts>
+      <manhunterTargetsVehicle>false</manhunterTargetsVehicle>
       <roles>
         <li>
-          <key>Left_Rider</key>
+          <key>Wagoner</key>
           <label>Wagoner</label>
           <handlingTypes>Movement</handlingTypes>
           <slots>1</slots>
           <slotsToOperate>1</slotsToOperate>
-          <comfort>0.3</comfort>
           <exposed>true</exposed>
-          <chanceToHit>0.3</chanceToHit>
           <hitbox>
             <cells>
-              <li>(-2,6)</li>
-              <li>(-2,7)</li>
+              <li>(2,9)</li>
             </cells>
           </hitbox>
           <pawnRenderer>
-            <drawOffsetNorth>(-1.8,0,6.5)</drawOffsetNorth>
-            <layerNorth>1</layerNorth>
-            <drawOffsetEast>(6,0,2.3)</drawOffsetEast>
-            <layerEast>1</layerEast>
-            <drawOffsetSouth>(2,0,-5.9)</drawOffsetSouth>
-            <layerSouth>1</layerSouth>
-            <drawOffsetWest>(-6,0,-1.8)</drawOffsetWest>
-            <layerWest>1</layerWest>
+            <drawOffsetNorth>(-1.5,0,7.5)</drawOffsetNorth>
+            <drawOffsetSouth>(1.5,0,-6.8)</drawOffsetSouth>
+            <drawOffsetEast>(7.5,0,2)</drawOffsetEast>
+            <drawOffsetWest>(-7.5,0,2)</drawOffsetWest>
+            <layerSouth>-1</layerSouth>
           </pawnRenderer>
         </li>
         <li>
-          <key>Right_Rider</key>
-          <label>Assistant</label>
+          <key>SecondWagoner</key>
+          <label>Second Wagoner</label>
           <handlingTypes>Movement</handlingTypes>
           <slots>1</slots>
-          <slotsToOperate>0</slotsToOperate>
-          <comfort>0.3</comfort>
           <exposed>true</exposed>
-          <chanceToHit>0.3</chanceToHit>
           <hitbox>
             <cells>
-              <li>(2,6)</li>
-              <li>(2,7)</li>
+              <li>(-2,9)</li>
             </cells>
           </hitbox>
           <pawnRenderer>
-            <drawOffsetNorth>(1.8,0,6.5)</drawOffsetNorth>
-            <layerNorth>1</layerNorth>
-            <drawOffsetEast>(6,0,-1.8)</drawOffsetEast>
-            <layerEast>1</layerEast>
-            <drawOffsetSouth>(-2,0,-5.9)</drawOffsetSouth>
-            <layerSouth>1</layerSouth>
-            <drawOffsetWest>(-6,0,2.3)</drawOffsetWest>
-            <layerWest>1</layerWest>
+            <drawOffsetNorth>(1.5,0,7.5)</drawOffsetNorth>
+            <drawOffsetSouth>(-1.5,0,-6.8)</drawOffsetSouth>
+            <drawOffsetEast>(7.5,0,-1.0)</drawOffsetEast>
+            <drawOffsetWest>(-7.5,0,-1)</drawOffsetWest>
+            <layerSouth>-1</layerSouth>
           </pawnRenderer>
         </li>
       </roles>
     </properties>
     <components>
       <li>
-        <key>LeftBison</key>
-        <label>Left Bison</label>
+        <key>LeftWheel</key>
+        <label>Left wheel</label>
         <health>300</health>
         <depth>External</depth>
-        <efficiencyWeight>1</efficiencyWeight>
-        <hitWeight>1</hitWeight>
+        <tags>
+          <li>Wheel</li>
+        </tags>
         <hitbox>
           <cells>
-            <li>(-3,7)</li>
-            <li>(-2,7)</li>
-            <li>(-1,7)</li>
-            <li>(-3,8)</li>
-            <li>(-2,8)</li>
-            <li>(-1,8)</li>
+            <li>(-5, -5)</li>
+            <li>(-5, -6)</li>
+            <li>(-5, -7)</li>
           </cells>
         </hitbox>
         <categories>
           <li>MoveSpeed</li>
         </categories>
-        <priorityStatEfficiency>true</priorityStatEfficiency>
-        <efficiency>
-          <points>
+      </li>
+      <li>
+        <key>RightWheel</key>
+        <label>Right wheel</label>
+        <health>300</health>
+        <depth>External</depth>
+        <tags>
+          <li>Wheel</li>
+        </tags>
+        <hitbox>
+          <cells>
+            <li>(6, -5)</li>
+            <li>(6, -6)</li>
+            <li>(6, -7)</li>
+          </cells>
+        </hitbox>
+        <categories>
+          <li>MoveSpeed</li>
+        </categories>
+      </li>
+      <li>
+        <key>LeftWheelFront</key>
+        <label>Left wheel (front)</label>
+        <health>300</health>
+        <depth>External</depth>
+        <tags>
+          <li>Wheel</li>
+        </tags>
+        <hitbox>
+          <cells>
+            <li>(-5, 3)</li>
+            <li>(-5, 4)</li>
+            <li>(-5, 5)</li>
+          </cells>
+        </hitbox>
+        <categories>
+          <li>MoveSpeed</li>
+        </categories>
+      </li>
+      <li>
+        <key>RightWheelFront</key>
+        <label>Right wheel (front)</label>
+        <health>300</health>
+        <depth>External</depth>
+        <tags>
+          <li>Wheel</li>
+        </tags>
+        <hitbox>
+          <cells>
+            <li>(6, 3)</li>
+            <li>(6, 4)</li>
+            <li>(6, 5)</li>
+          </cells>
+        </hitbox>
+        <categories>
+          <li>MoveSpeed</li>
+        </categories>
+      </li>
+      <li>
+        <key>WoodenStructure</key>
+        <label>Wooden structure</label>
+        <health>50</health>
+        <depth>External</depth>
+        <hitbox>
+          <cells>
+            
+            <li>(-4, -7)</li>
+            <li>(-3, -7)</li>
+            <li>(-2, -7)</li>
+            <li>(-1, -7)</li>
+            <li>(0, -7)</li>
+            <li>(1, -7)</li>
+            <li>(2, -7)</li>
+            <li>(3, -7)</li>
+            <li>(4, -7)</li>
+            <li>(5, -7)</li>
+            
+            <li>(-4, -6)</li>
+            <li>(-3, -6)</li>
+            <li>(-2, -6)</li>
+            <li>(-1, -6)</li>
+            <li>(0, -6)</li>
+            <li>(1, -6)</li>
+            <li>(2, -6)</li>
+            <li>(3, -6)</li>
+            <li>(4, -6)</li>
+            <li>(5, -6)</li>
+            
+            <li>(-4, -5)</li>
+            <li>(-3, -5)</li>
+            <li>(-2, -5)</li>
+            <li>(-1, -5)</li>
+            <li>(0, -5)</li>
+            <li>(1, -5)</li>
+            <li>(2, -5)</li>
+            <li>(3, -5)</li>
+            <li>(4, -5)</li>
+            <li>(5, -5)</li>
+            
+            <li>(-4, -4)</li>
+            <li>(-3, -4)</li>
+            <li>(-2, -4)</li>
+            <li>(-1, -4)</li>
+            <li>(0, -4)</li>
+            <li>(1, -4)</li>
+            <li>(2, -4)</li>
+            <li>(3, -4)</li>
+            <li>(4, -4)</li>
+            <li>(5, -4)</li>
+            
+            <li>(-4, -3)</li>
+            <li>(-3, -3)</li>
+            <li>(-2, -3)</li>
+            <li>(-1, -3)</li>
+            <li>(0, -3)</li>
+            <li>(1, -3)</li>
+            <li>(2, -3)</li>
+            <li>(3, -3)</li>
+            <li>(4, -3)</li>
+            <li>(5, -3)</li>
+            
+            <li>(-4, -2)</li>
+            <li>(-3, -2)</li>
+            <li>(-2, -2)</li>
+            <li>(-1, -2)</li>
+            <li>(0, -2)</li>
+            <li>(1, -2)</li>
+            <li>(2, -2)</li>
+            <li>(3, -2)</li>
+            <li>(4, -2)</li>
+            <li>(5, -2)</li>
+            
+            <li>(-4, -1)</li>
+            <li>(-3, -1)</li>
+            <li>(-2, -1)</li>
+            <li>(-1, -1)</li>
+            <li>(0, -1)</li>
+            <li>(1, -1)</li>
+            <li>(2, -1)</li>
+            <li>(3, -1)</li>
+            <li>(4, -1)</li>
+            <li>(5, -1)</li>
+            
+            <li>(-4, 0)</li>
+            <li>(-3, 0)</li>
+            <li>(-2, 0)</li>
+            <li>(-1, 0)</li>
             <li>(0, 0)</li>
-            <li>(0.01, 1)</li>
-            <li>(0.25, 1)</li>
-            <li>(0.5, 1)</li>
+            <li>(1, 0)</li>
+            <li>(2, 0)</li>
+            <li>(3, 0)</li>
+            <li>(4, 0)</li>
+            <li>(5, 0)</li>
+            
+            <li>(-4, 1)</li>
+            <li>(-3, 1)</li>
+            <li>(-2, 1)</li>
+            <li>(-1, 1)</li>
+            <li>(0, 1)</li>
             <li>(1, 1)</li>
-          </points>
-        </efficiency>
-      </li>
-      <li>
-        <key>RightBison</key>
-        <label>Right Bison</label>
-        <health>300</health>
-        <depth>External</depth>
-        <efficiencyWeight>1</efficiencyWeight>
-        <hitWeight>1</hitWeight>
-        <hitbox>
-          <cells>
-            <li>(1,7)</li>
-            <li>(2,7)</li>
-            <li>(3,7)</li>
-            <li>(1,8)</li>
-            <li>(2,8)</li>
-            <li>(3,8)</li>
-          </cells>
-        </hitbox>
-        <categories>
-          <li>MoveSpeed</li>
-        </categories>
-        <priorityStatEfficiency>true</priorityStatEfficiency>
-        <efficiency>
-          <points>
-            <li>(0, 0)</li>
-            <li>(0.01, 1)</li>
-            <li>(0.25, 1)</li>
-            <li>(0.5, 1)</li>
-            <li>(1, 1)</li>
-          </points>
-        </efficiency>
-      </li>
-      <li>
-        <key>FrontLeftWheel</key>
-        <label>Front Left Wheel</label>
-        <health>300</health>
-        <depth>External</depth>
-        <efficiencyWeight>1</efficiencyWeight>
-        <hitWeight>1</hitWeight>
-        <hitbox>
-          <cells>
-            <li>(-4,2)</li>
-            <li>(-4,3)</li>
-            <li>(-4,4)</li>
-          </cells>
-        </hitbox>
-        <tags>
-          <li>Wheel</li>
-        </tags>
-        <categories>
-          <li>MoveSpeed</li>
-        </categories>
-      </li>
-      <li>
-        <key>FrontRightWheel</key>
-        <label>Front Right Wheel</label>
-        <health>300</health>
-        <depth>External</depth>
-        <efficiencyWeight>1</efficiencyWeight>
-        <hitWeight>1</hitWeight>
-        <hitbox>
-          <cells>
-            <li>(4,2)</li>
-            <li>(4,3)</li>
-            <li>(4,4)</li>
-          </cells>
-        </hitbox>
-        <tags>
-          <li>Wheel</li>
-        </tags>
-        <categories>
-          <li>MoveSpeed</li>
-        </categories>
-      </li>
-      <li>
-        <key>MidLeftWheel</key>
-        <label>Mid Left Wheel</label>
-        <health>300</health>
-        <depth>External</depth>
-        <efficiencyWeight>1</efficiencyWeight>
-        <hitWeight>1</hitWeight>
-        <hitbox>
-          <cells>
-            <li>(-4,-2)</li>
-            <li>(-4,-1)</li>
-            <li>(-4,0)</li>
-          </cells>
-        </hitbox>
-        <tags>
-          <li>Wheel</li>
-        </tags>
-        <categories>
-          <li>MoveSpeed</li>
-        </categories>
-      </li>
-      <li>
-        <key>MidRightWheel</key>
-        <label>Mid Right Wheel</label>
-        <health>300</health>
-        <depth>External</depth>
-        <efficiencyWeight>1</efficiencyWeight>
-        <hitWeight>1</hitWeight>
-        <hitbox>
-          <cells>
-            <li>(4,-2)</li>
-            <li>(4,-1)</li>
-            <li>(4,0)</li>
-          </cells>
-        </hitbox>
-        <tags>
-          <li>Wheel</li>
-        </tags>
-        <categories>
-          <li>MoveSpeed</li>
-        </categories>
-      </li>
-      <li>
-        <key>LeftBackWheel</key>
-        <label>Left Back Wheel</label>
-        <health>300</health>
-        <depth>External</depth>
-        <efficiencyWeight>1</efficiencyWeight>
-        <hitWeight>1</hitWeight>
-        <hitbox>
-          <cells>
-            <li>(-4,-6)</li>
-            <li>(-4,-5)</li>
-            <li>(-4,-4)</li>
-          </cells>
-        </hitbox>
-        <tags>
-          <li>Wheel</li>
-        </tags>
-        <categories>
-          <li>MoveSpeed</li>
-        </categories>
-      </li>
-      <li>
-        <key>RightBackWheel</key>
-        <label>Right Back Wheel</label>
-        <health>300</health>
-        <depth>External</depth>
-        <efficiencyWeight>1</efficiencyWeight>
-        <hitWeight>1</hitWeight>
-        <hitbox>
-          <cells>
-            <li>(4,-6)</li>
-            <li>(4,-5)</li>
-            <li>(4,-4)</li>
-          </cells>
-        </hitbox>
-        <tags>
-          <li>Wheel</li>
-        </tags>
-        <categories>
-          <li>MoveSpeed</li>
-        </categories>
-      </li>
-      <li>
-        <key>WoodenCart</key>
-        <label>WoodenCart</label>
-        <health>1000</health>
-        <depth>External</depth>
-        <efficiencyWeight>1</efficiencyWeight>
-        <hitWeight>1</hitWeight>
-        <hitbox>
-          <cells>
-            <li>(-4,-7)</li>
-            <li>(-3,-7)</li>
-            <li>(-2,-7)</li>
-            <li>(-1,-7)</li>
-            <li>(0,-7)</li>
-            <li>(1,-7)</li>
-            <li>(2,-7)</li>
-            <li>(3,-7)</li>
-            <li>(4,-7)</li>
-            <li>(-4,-6)</li>
-            <li>(-3,-6)</li>
-            <li>(-2,-6)</li>
-            <li>(-1,-6)</li>
-            <li>(0,-6)</li>
-            <li>(1,-6)</li>
-            <li>(2,-6)</li>
-            <li>(3,-6)</li>
-            <li>(4,-6)</li>
-            <li>(-4,-5)</li>
-            <li>(-3,-5)</li>
-            <li>(-2,-5)</li>
-            <li>(-1,-5)</li>
-            <li>(0,-5)</li>
-            <li>(1,-5)</li>
-            <li>(2,-5)</li>
-            <li>(3,-5)</li>
-            <li>(4,-5)</li>
-            <li>(-4,-4)</li>
-            <li>(-3,-4)</li>
-            <li>(-2,-4)</li>
-            <li>(-1,-4)</li>
-            <li>(0,-4)</li>
-            <li>(1,-4)</li>
-            <li>(2,-4)</li>
-            <li>(3,-4)</li>
-            <li>(4,-4)</li>
-            <li>(-4,-3)</li>
-            <li>(-3,-3)</li>
-            <li>(-2,-3)</li>
-            <li>(-1,-3)</li>
-            <li>(0,-3)</li>
-            <li>(1,-3)</li>
-            <li>(2,-3)</li>
-            <li>(3,-3)</li>
-            <li>(4,-3)</li>
-            <li>(-4,-2)</li>
-            <li>(-3,-2)</li>
-            <li>(-2,-2)</li>
-            <li>(-1,-2)</li>
-            <li>(0,-2)</li>
-            <li>(1,-2)</li>
-            <li>(2,-2)</li>
-            <li>(3,-2)</li>
-            <li>(4,-2)</li>
-            <li>(-4,-1)</li>
-            <li>(-3,-1)</li>
-            <li>(-2,-1)</li>
-            <li>(-1,-1)</li>
-            <li>(0,-1)</li>
-            <li>(1,-1)</li>
-            <li>(2,-1)</li>
-            <li>(3,-1)</li>
-            <li>(4,-1)</li>
-            <li>(-4,0)</li>
-            <li>(-3,0)</li>
-            <li>(-2,0)</li>
-            <li>(-1,0)</li>
-            <li>(0,0)</li>
-            <li>(1,0)</li>
-            <li>(2,0)</li>
-            <li>(3,0)</li>
-            <li>(4,0)</li>
-            <li>(-4,1)</li>
-            <li>(-3,1)</li>
-            <li>(-2,1)</li>
-            <li>(-1,1)</li>
-            <li>(0,1)</li>
-            <li>(1,1)</li>
-            <li>(2,1)</li>
-            <li>(3,1)</li>
-            <li>(4,1)</li>
-            <li>(-4,2)</li>
-            <li>(-3,2)</li>
-            <li>(-2,2)</li>
-            <li>(-1,2)</li>
-            <li>(0,2)</li>
-            <li>(1,2)</li>
-            <li>(2,2)</li>
-            <li>(3,2)</li>
-            <li>(4,2)</li>
-            <li>(-4,3)</li>
-            <li>(-3,3)</li>
-            <li>(-2,3)</li>
-            <li>(-1,3)</li>
-            <li>(0,3)</li>
-            <li>(1,3)</li>
-            <li>(2,3)</li>
-            <li>(3,3)</li>
-            <li>(4,3)</li>
-            <li>(-4,4)</li>
-            <li>(-3,4)</li>
-            <li>(-2,4)</li>
-            <li>(-1,4)</li>
-            <li>(0,4)</li>
-            <li>(1,4)</li>
-            <li>(2,4)</li>
-            <li>(3,4)</li>
-            <li>(4,4)</li>
-            <li>(-4,5)</li>
-            <li>(-3,5)</li>
-            <li>(-2,5)</li>
-            <li>(-1,5)</li>
-            <li>(0,5)</li>
-            <li>(1,5)</li>
-            <li>(2,5)</li>
-            <li>(3,5)</li>
-            <li>(4,5)</li>
-            <li>(-4,6)</li>
-            <li>(-3,6)</li>
-            <li>(-2,6)</li>
-            <li>(-1,6)</li>
-            <li>(0,6)</li>
-            <li>(1,6)</li>
-            <li>(2,6)</li>
-            <li>(3,6)</li>
-            <li>(4,6)</li>
+            <li>(2, 1)</li>
+            <li>(3, 1)</li>
+            <li>(4, 1)</li>
+            <li>(5, 1)</li>
+            
+            <li>(-4, 2)</li>
+            <li>(-3, 2)</li>
+            <li>(-2, 2)</li>
+            <li>(-1, 2)</li>
+            <li>(0, 2)</li>
+            <li>(1, 2)</li>
+            <li>(2, 2)</li>
+            <li>(3, 2)</li>
+            <li>(4, 2)</li>
+            <li>(5, 2)</li>
+            
+            <li>(-4, 3)</li>
+            <li>(-3, 3)</li>
+            <li>(-2, 3)</li>
+            <li>(-1, 3)</li>
+            <li>(0, 3)</li>
+            <li>(1, 3)</li>
+            <li>(2, 3)</li>
+            <li>(3, 3)</li>
+            <li>(4, 3)</li>
+            <li>(5, 3)</li>
+            
+            <li>(-4, 4)</li>
+            <li>(-3, 4)</li>
+            <li>(-2, 4)</li>
+            <li>(-1, 4)</li>
+            <li>(0, 4)</li>
+            <li>(1, 4)</li>
+            <li>(2, 4)</li>
+            <li>(3, 4)</li>
+            <li>(4, 4)</li>
+            <li>(5, 4)</li>
+            
+            <li>(-4, 5)</li>
+            <li>(-3, 5)</li>
+            <li>(-2, 5)</li>
+            <li>(-1, 5)</li>
+            <li>(0, 5)</li>
+            <li>(1, 5)</li>
+            <li>(2, 5)</li>
+            <li>(3, 5)</li>
+            <li>(4, 5)</li>
+            <li>(5, 5)</li>
+
+            <li>(-4, 6)</li>
+            <li>(-3, 6)</li>
+            <li>(-2, 6)</li>
+            <li>(-1, 6)</li>
+            <li>(0, 6)</li>
+            <li>(1, 6)</li>
+            <li>(2, 6)</li>
+            <li>(3, 6)</li>
+            <li>(4, 6)</li>
+            <li>(5, 6)</li>
           </cells>
         </hitbox>
       </li>
     </components>
+    <comps>
+      <li Class="Vehicles.CompProperties_FueledTravel">
+        <fuelType>Hay</fuelType>
+        <fuelConsumptionRate>20</fuelConsumptionRate>
+        <fuelCapacity>300</fuelCapacity>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="VehicleMapFramework.VehicleMapProps">
-        <size>(8,12)</size>
-        <offsetNorth>(-0.00390625,0,-1.648438)</offsetNorth>
+        <size>(12,18)</size>
+        <offsetNorth>(0,0,0)</offsetNorth>
+        <offsetSouth>(0,0,0)</offsetSouth>
+        <offsetEast>(0,0,0)</offsetEast>
+        <!-- No cutouts during alignment; keep structure contiguous for pathing -->
+        <filledStructureCellRects>
+          <li>(0,15,11,15)</li>
+          <li>(0,16,11,16)</li>
+          <li>(0,17,11,17)</li>
+        </filledStructureCellRects>
         <edgeSpaceNorth>
-          <north>0</north>
-          <south>0</south>
-          <east>0</east>
-          <west>0</west>
+          <north>2.00</north>
+          <south>0.5</south>
+          <east>0.5</east>
         </edgeSpaceNorth>
-        <offsetEast>(-1.453125,0,-0.01171875)</offsetEast>
         <edgeSpaceEast>
-          <north>0</north>
-          <south>0</south>
-          <east>0</east>
-          <west>0</west>
+          <north>2.00</north>
+          <east>0.5</east>
+          <west>0.5</west>
         </edgeSpaceEast>
-        <offsetSouth>(-0.00390625,0,1.5)</offsetSouth>
-        <edgeSpaceSouth>
-          <north>0</north>
-          <south>0</south>
-          <east>0</east>
-          <west>0</west>
-        </edgeSpaceSouth>
-        <offsetWest>(1.398438,0,-0.01171875)</offsetWest>
-        <edgeSpaceWest>
-          <north>0</north>
-          <south>0</south>
-          <east>0</east>
-          <west>0</west>
-        </edgeSpaceWest>
-        <emptyStructureCellRects>
-          <li>(1,12,6,12)</li>
-        </emptyStructureCellRects>
       </li>
+      <li Class="VehicleMapFramework.VehicleHumanPowered"/>
     </modExtensions>
   </Vehicles.VehicleDef>
-  <Vehicles.VehicleBuildDef ParentName="VehicleWithMapBaseBuildable">
-    <defName>N_Carts_10x14_Variant_Blueprint</defName>
-    <label>Large Cart</label>
-    <description>A large wooden cart, drawn by two bisons.</description>
-    <designationCategory>VF_Vehicles</designationCategory>
-    <graphicData>
-      <texPath>Things/Vehicles/Cart_10x14_Variant/Cart_10x14_Variant</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <shaderType>Cutout</shaderType>
-      <drawSize>(9.554688,17.29688)</drawSize>
-      <allowFlip>false</allowFlip>
-      <drawOffsetNorth>(0.00390625,0,0.6484375)</drawOffsetNorth>
-      <drawOffsetEast>(0.453125,0,0.01171875)</drawOffsetEast>
-      <drawOffsetSouth>(0.00390625,0,-0.5)</drawOffsetSouth>
-      <drawOffsetWest>(-0.3984375,0,0.01171875)</drawOffsetWest>
-    </graphicData>
-    <statBases>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <WorkToBuild>5000</WorkToBuild>
-      <Flammability>1</Flammability>
-    </statBases>
-    <size>(9,16)</size>
-    <thingToSpawn>N_Carts_10x14_Variant</thingToSpawn>
-    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-    <researchPrerequisites>
-      <li>N_Carts</li>
-    </researchPrerequisites>
-    <costList>
-      <WoodLog>800</WoodLog>
-      <Steel>500</Steel>
-    </costList>
-    <soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
-  </Vehicles.VehicleBuildDef>
+
 </Defs>
