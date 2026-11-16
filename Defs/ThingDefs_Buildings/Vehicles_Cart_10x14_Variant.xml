@@ -143,6 +143,16 @@
         <categories>
           <li>MoveSpeed</li>
         </categories>
+        <priorityStatEfficiency>true</priorityStatEfficiency>
+        <efficiency>
+          <points>
+            <li>(0, 0)</li>
+            <li>(0.01, 1)</li>
+            <li>(0.25, 1)</li>
+            <li>(0.5, 1)</li>
+            <li>(1, 1)</li>
+          </points>
+        </efficiency>
       </li>
       <li>
         <key>RightBison</key>
@@ -164,6 +174,16 @@
         <categories>
           <li>MoveSpeed</li>
         </categories>
+        <priorityStatEfficiency>true</priorityStatEfficiency>
+        <efficiency>
+          <points>
+            <li>(0, 0)</li>
+            <li>(0.01, 1)</li>
+            <li>(0.25, 1)</li>
+            <li>(0.5, 1)</li>
+            <li>(1, 1)</li>
+          </points>
+        </efficiency>
       </li>
       <li>
         <key>FrontLeftWheel</key>
