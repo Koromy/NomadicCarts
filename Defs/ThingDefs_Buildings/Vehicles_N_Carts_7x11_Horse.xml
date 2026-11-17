@@ -58,10 +58,6 @@
           <value>10000</value>
         </li>
         <li>
-          <key>WaterMovingChestDeep</key>
-          <value>10000</value>
-        </li>
-        <li>
           <key>WaterOceanDeep</key>
           <value>10000</value>
         </li>
@@ -147,7 +143,7 @@
         </categories>
       </li>
       <li>
-        <key>Front_Right_Whel</key>
+        <key>Front_Right_Wheel</key>
         <label>Front Right Wheel</label>
         <health>200</health>
         <depth>External</depth>
@@ -393,6 +389,9 @@
         </emptyStructureCellRects>
       </li>
     </modExtensions>
+    <race>
+      <fleshType>WoodenVehicle</fleshType>
+    </race>
   </Vehicles.VehicleDef>
   <Vehicles.VehicleBuildDef ParentName="VehicleWithMapBaseBuildable">
     <defName>N_Carts_7x11_Horse_Blueprint</defName>

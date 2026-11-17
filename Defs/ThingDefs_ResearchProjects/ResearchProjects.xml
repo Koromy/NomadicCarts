@@ -7,6 +7,7 @@
         <description>Learn how to construct carts. Carts are rustic vehicle maps, that are powered by animals and allow you to build on top of their deck.</description>
         <baseCost>600</baseCost>
         <techLevel>Medieval</techLevel>
+		<tab>Koro_NomadicCarts_Research</tab>
         <researchViewX>0.00</researchViewX>
         <researchViewY>0.00</researchViewY>
         <generalRules>
@@ -21,4 +22,10 @@
         </generalRules>
     </ResearchProjectDef>
 
+	<ResearchTabDef>
+		<defName>Koro_NomadicCarts_Research</defName>
+		<label>Nomadic Carts</label>
+		<generalTitle>Nomadic Cart Research</generalTitle>
+		<generalDescription>Research for building nomadic carts.</generalDescription>
+	</ResearchTabDef>
 </Defs>

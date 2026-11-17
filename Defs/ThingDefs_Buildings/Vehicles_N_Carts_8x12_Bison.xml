@@ -10,15 +10,15 @@
       <texPath>Things/Vehicles/N_Carts_8x12_Bison/N_Carts_8x12_Bison</texPath>
       <graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
       <shaderType>Cutout</shaderType>
-      <drawSize>(9.554688,17.29688)</drawSize>
+      <drawSize>(11.55469,19.29688)</drawSize>
       <allowFlip>false</allowFlip>
-      <drawOffsetNorth>(0.00390625,0,0.6484375)</drawOffsetNorth>
-      <drawOffsetEast>(0.453125,0,0.01171875)</drawOffsetEast>
-      <drawOffsetSouth>(0.00390625,0,-0.5)</drawOffsetSouth>
-      <drawOffsetWest>(-0.3984375,0,0.01171875)</drawOffsetWest>
+      <drawOffsetNorth>(0.00390625,0,0.1484375)</drawOffsetNorth>
+      <drawOffsetEast>(0.09375,0,0.01171875)</drawOffsetEast>
+      <drawOffsetSouth>(0.00390625,0,-0.0390625)</drawOffsetSouth>
+      <drawOffsetWest>(-0.0859375,0,0.01171875)</drawOffsetWest>
     </graphicData>
     <buildDef>N_Carts_8x12_Bison_Blueprint</buildDef>
-    <size>(9,16)</size>
+    <size>(11,17)</size>
     <vehicleCategory>Transport</vehicleCategory>
     <techLevel>Medieval</techLevel>
     <vehicleType>Land</vehicleType>
@@ -42,7 +42,7 @@
       </li>
     </comps>
     <vehicleStats>
-      <Mass>400</Mass>
+      <Mass>600</Mass>
       <MoveSpeed>2</MoveSpeed>
       <CargoCapacity>800</CargoCapacity>
       <MaximumPayload>800</MaximumPayload>
@@ -84,13 +84,13 @@
             </cells>
           </hitbox>
           <pawnRenderer>
-            <drawOffsetNorth>(-1.8,0,6.5)</drawOffsetNorth>
+            <drawOffsetNorth>(-1.8,0,7)</drawOffsetNorth>
             <layerNorth>1</layerNorth>
-            <drawOffsetEast>(6,0,2.3)</drawOffsetEast>
+            <drawOffsetEast>(6.5,0,2.3)</drawOffsetEast>
             <layerEast>1</layerEast>
-            <drawOffsetSouth>(2,0,-5.9)</drawOffsetSouth>
+            <drawOffsetSouth>(2,0,-6.4)</drawOffsetSouth>
             <layerSouth>1</layerSouth>
-            <drawOffsetWest>(-6,0,-1.8)</drawOffsetWest>
+            <drawOffsetWest>(-6.5,0,-1.8)</drawOffsetWest>
             <layerWest>1</layerWest>
           </pawnRenderer>
         </li>
@@ -110,13 +110,13 @@
             </cells>
           </hitbox>
           <pawnRenderer>
-            <drawOffsetNorth>(1.8,0,6.5)</drawOffsetNorth>
+            <drawOffsetNorth>(1.8,0,7)</drawOffsetNorth>
             <layerNorth>1</layerNorth>
-            <drawOffsetEast>(6,0,-1.8)</drawOffsetEast>
+            <drawOffsetEast>(6.5,0,-1.8)</drawOffsetEast>
             <layerEast>1</layerEast>
-            <drawOffsetSouth>(-2,0,-5.9)</drawOffsetSouth>
+            <drawOffsetSouth>(-2,0,-6.4)</drawOffsetSouth>
             <layerSouth>1</layerSouth>
-            <drawOffsetWest>(-6,0,2.3)</drawOffsetWest>
+            <drawOffsetWest>(-6.5,0,2.3)</drawOffsetWest>
             <layerWest>1</layerWest>
           </pawnRenderer>
         </li>
@@ -194,9 +194,9 @@
         <hitWeight>1</hitWeight>
         <hitbox>
           <cells>
-            <li>(-4,2)</li>
-            <li>(-4,3)</li>
-            <li>(-4,4)</li>
+            <li>(-5,2)</li>
+            <li>(-5,3)</li>
+            <li>(-5,4)</li>
           </cells>
         </hitbox>
         <tags>
@@ -215,9 +215,9 @@
         <hitWeight>1</hitWeight>
         <hitbox>
           <cells>
-            <li>(4,2)</li>
-            <li>(4,3)</li>
-            <li>(4,4)</li>
+            <li>(5,2)</li>
+            <li>(5,3)</li>
+            <li>(5,4)</li>
           </cells>
         </hitbox>
         <tags>
@@ -236,9 +236,9 @@
         <hitWeight>1</hitWeight>
         <hitbox>
           <cells>
-            <li>(-4,-2)</li>
-            <li>(-4,-1)</li>
-            <li>(-4,0)</li>
+            <li>(-5,-3)</li>
+            <li>(-5,-2)</li>
+            <li>(-5,-1)</li>
           </cells>
         </hitbox>
         <tags>
@@ -257,9 +257,9 @@
         <hitWeight>1</hitWeight>
         <hitbox>
           <cells>
-            <li>(4,-2)</li>
-            <li>(4,-1)</li>
-            <li>(4,0)</li>
+            <li>(5,-3)</li>
+            <li>(5,-2)</li>
+            <li>(5,-1)</li>
           </cells>
         </hitbox>
         <tags>
@@ -278,9 +278,9 @@
         <hitWeight>1</hitWeight>
         <hitbox>
           <cells>
-            <li>(-4,-6)</li>
-            <li>(-4,-5)</li>
-            <li>(-4,-4)</li>
+            <li>(-5,-8)</li>
+            <li>(-5,-7)</li>
+            <li>(-5,-6)</li>
           </cells>
         </hitbox>
         <tags>
@@ -299,9 +299,9 @@
         <hitWeight>1</hitWeight>
         <hitbox>
           <cells>
-            <li>(4,-6)</li>
-            <li>(4,-5)</li>
-            <li>(4,-4)</li>
+            <li>(5,-8)</li>
+            <li>(5,-7)</li>
+            <li>(5,-6)</li>
           </cells>
         </hitbox>
         <tags>
@@ -315,11 +315,23 @@
         <key>WoodenCart</key>
         <label>WoodenCart</label>
         <health>1000</health>
-        <depth>External</depth>
+        <depth>Internal</depth>
         <efficiencyWeight>1</efficiencyWeight>
         <hitWeight>1</hitWeight>
         <hitbox>
           <cells>
+            <li>(-5,-8)</li>
+            <li>(-4,-8)</li>
+            <li>(-3,-8)</li>
+            <li>(-2,-8)</li>
+            <li>(-1,-8)</li>
+            <li>(0,-8)</li>
+            <li>(1,-8)</li>
+            <li>(2,-8)</li>
+            <li>(3,-8)</li>
+            <li>(4,-8)</li>
+            <li>(5,-8)</li>
+            <li>(-5,-7)</li>
             <li>(-4,-7)</li>
             <li>(-3,-7)</li>
             <li>(-2,-7)</li>
@@ -329,6 +341,8 @@
             <li>(2,-7)</li>
             <li>(3,-7)</li>
             <li>(4,-7)</li>
+            <li>(5,-7)</li>
+            <li>(-5,-6)</li>
             <li>(-4,-6)</li>
             <li>(-3,-6)</li>
             <li>(-2,-6)</li>
@@ -338,6 +352,8 @@
             <li>(2,-6)</li>
             <li>(3,-6)</li>
             <li>(4,-6)</li>
+            <li>(5,-6)</li>
+            <li>(-5,-5)</li>
             <li>(-4,-5)</li>
             <li>(-3,-5)</li>
             <li>(-2,-5)</li>
@@ -347,6 +363,8 @@
             <li>(2,-5)</li>
             <li>(3,-5)</li>
             <li>(4,-5)</li>
+            <li>(5,-5)</li>
+            <li>(-5,-4)</li>
             <li>(-4,-4)</li>
             <li>(-3,-4)</li>
             <li>(-2,-4)</li>
@@ -356,6 +374,8 @@
             <li>(2,-4)</li>
             <li>(3,-4)</li>
             <li>(4,-4)</li>
+            <li>(5,-4)</li>
+            <li>(-5,-3)</li>
             <li>(-4,-3)</li>
             <li>(-3,-3)</li>
             <li>(-2,-3)</li>
@@ -365,6 +385,8 @@
             <li>(2,-3)</li>
             <li>(3,-3)</li>
             <li>(4,-3)</li>
+            <li>(5,-3)</li>
+            <li>(-5,-2)</li>
             <li>(-4,-2)</li>
             <li>(-3,-2)</li>
             <li>(-2,-2)</li>
@@ -374,6 +396,8 @@
             <li>(2,-2)</li>
             <li>(3,-2)</li>
             <li>(4,-2)</li>
+            <li>(5,-2)</li>
+            <li>(-5,-1)</li>
             <li>(-4,-1)</li>
             <li>(-3,-1)</li>
             <li>(-2,-1)</li>
@@ -383,6 +407,8 @@
             <li>(2,-1)</li>
             <li>(3,-1)</li>
             <li>(4,-1)</li>
+            <li>(5,-1)</li>
+            <li>(-5,0)</li>
             <li>(-4,0)</li>
             <li>(-3,0)</li>
             <li>(-2,0)</li>
@@ -392,6 +418,8 @@
             <li>(2,0)</li>
             <li>(3,0)</li>
             <li>(4,0)</li>
+            <li>(5,0)</li>
+            <li>(-5,1)</li>
             <li>(-4,1)</li>
             <li>(-3,1)</li>
             <li>(-2,1)</li>
@@ -401,6 +429,8 @@
             <li>(2,1)</li>
             <li>(3,1)</li>
             <li>(4,1)</li>
+            <li>(5,1)</li>
+            <li>(-5,2)</li>
             <li>(-4,2)</li>
             <li>(-3,2)</li>
             <li>(-2,2)</li>
@@ -410,6 +440,8 @@
             <li>(2,2)</li>
             <li>(3,2)</li>
             <li>(4,2)</li>
+            <li>(5,2)</li>
+            <li>(-5,3)</li>
             <li>(-4,3)</li>
             <li>(-3,3)</li>
             <li>(-2,3)</li>
@@ -419,6 +451,8 @@
             <li>(2,3)</li>
             <li>(3,3)</li>
             <li>(4,3)</li>
+            <li>(5,3)</li>
+            <li>(-5,4)</li>
             <li>(-4,4)</li>
             <li>(-3,4)</li>
             <li>(-2,4)</li>
@@ -428,6 +462,8 @@
             <li>(2,4)</li>
             <li>(3,4)</li>
             <li>(4,4)</li>
+            <li>(5,4)</li>
+            <li>(-5,5)</li>
             <li>(-4,5)</li>
             <li>(-3,5)</li>
             <li>(-2,5)</li>
@@ -437,6 +473,8 @@
             <li>(2,5)</li>
             <li>(3,5)</li>
             <li>(4,5)</li>
+            <li>(5,5)</li>
+            <li>(-5,6)</li>
             <li>(-4,6)</li>
             <li>(-3,6)</li>
             <li>(-2,6)</li>
@@ -446,13 +484,14 @@
             <li>(2,6)</li>
             <li>(3,6)</li>
             <li>(4,6)</li>
+            <li>(5,6)</li>
           </cells>
         </hitbox>
       </li>
     </components>
     <modExtensions>
       <li Class="VehicleMapFramework.VehicleMapProps">
-        <size>(8,12)</size>
+        <size>(10,14)</size>
         <offsetNorth>(-0.00390625,0,-1.648438)</offsetNorth>
         <edgeSpaceNorth>
           <north>0</north>
@@ -460,21 +499,21 @@
           <east>0</east>
           <west>0</west>
         </edgeSpaceNorth>
-        <offsetEast>(-1.453125,0,-0.01171875)</offsetEast>
+        <offsetEast>(-1.59375,0,-0.01171875)</offsetEast>
         <edgeSpaceEast>
           <north>0</north>
           <south>0</south>
           <east>0</east>
           <west>0</west>
         </edgeSpaceEast>
-        <offsetSouth>(-0.00390625,0,1.5)</offsetSouth>
+        <offsetSouth>(-0.00390625,0,1.539063)</offsetSouth>
         <edgeSpaceSouth>
           <north>0</north>
           <south>0</south>
           <east>0</east>
           <west>0</west>
         </edgeSpaceSouth>
-        <offsetWest>(1.398438,0,-0.01171875)</offsetWest>
+        <offsetWest>(1.585938,0,-0.01171875)</offsetWest>
         <edgeSpaceWest>
           <north>0</north>
           <south>0</south>
@@ -482,10 +521,13 @@
           <west>0</west>
         </edgeSpaceWest>
         <emptyStructureCellRects>
-          <li>(1,12,6,12)</li>
+          <li>(2,14,7,14)</li>
         </emptyStructureCellRects>
       </li>
     </modExtensions>
+    <race>
+      <fleshType>WoodenVehicle</fleshType>
+    </race>
   </Vehicles.VehicleDef>
   <Vehicles.VehicleBuildDef ParentName="VehicleWithMapBaseBuildable">
     <defName>N_Carts_8x12_Bison_Blueprint</defName>
@@ -496,27 +538,27 @@
       <texPath>Things/Vehicles/N_Carts_8x12_Bison/N_Carts_8x12_Bison</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>Cutout</shaderType>
-      <drawSize>(9.554688,17.29688)</drawSize>
+      <drawSize>(11.55469,19.29688)</drawSize>
       <allowFlip>false</allowFlip>
-      <drawOffsetNorth>(0.00390625,0,0.6484375)</drawOffsetNorth>
-      <drawOffsetEast>(0.453125,0,0.01171875)</drawOffsetEast>
-      <drawOffsetSouth>(0.00390625,0,-0.5)</drawOffsetSouth>
-      <drawOffsetWest>(-0.3984375,0,0.01171875)</drawOffsetWest>
+      <drawOffsetNorth>(0.00390625,0,0.1484375)</drawOffsetNorth>
+      <drawOffsetEast>(0.09375,0,0.01171875)</drawOffsetEast>
+      <drawOffsetSouth>(0.00390625,0,-0.0390625)</drawOffsetSouth>
+      <drawOffsetWest>(-0.0859375,0,0.01171875)</drawOffsetWest>
     </graphicData>
     <statBases>
       <MaxHitPoints>1000</MaxHitPoints>
       <WorkToBuild>5000</WorkToBuild>
       <Flammability>1</Flammability>
     </statBases>
-    <size>(9,16)</size>
+    <size>(11,17)</size>
     <thingToSpawn>N_Carts_8x12_Bison</thingToSpawn>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <researchPrerequisites>
       <li>N_Carts</li>
     </researchPrerequisites>
     <costList>
-      <WoodLog>800</WoodLog>
-      <Steel>500</Steel>
+      <WoodLog>1200</WoodLog>
+      <Steel>400</Steel>
     </costList>
     <soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
   </Vehicles.VehicleBuildDef>
