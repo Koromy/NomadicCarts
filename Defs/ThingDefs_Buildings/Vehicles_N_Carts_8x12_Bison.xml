@@ -45,7 +45,7 @@
       <Mass>600</Mass>
       <MoveSpeed>2</MoveSpeed>
       <CargoCapacity>800</CargoCapacity>
-      <MaximumPayload>800</MaximumPayload>
+      <MaximumPayload>0</MaximumPayload>
       <RepairRate>1.5</RepairRate>
     </vehicleStats>
     <properties>
